@@ -1,0 +1,17 @@
+getgenv().keytoclick = "C"
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = keytoclick
+tool.Activated:connect(function()
+    local vim = game:service("VirtualInputManager")
+vim:SendKeyEvent(true, keytoclick, false, game)
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+wait(0.2)
+local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nilloo12/0/main/0"))();
+local Notify = AkaliNotif.Notify;
+Notify({
+Description = "madeby:sora_tox";
+Title = "private";
+Duration = 10;
+})
